@@ -1,0 +1,168 @@
+.box {
+  width: 100%;
+}
+.box .title {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5rem 3rem 2rem 3rem;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.box .title .left img {
+  height: 4.4rem;
+}
+.box .title .right {
+  font-size: 3rem;
+  color: #666666;
+}
+.box .logo {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.box .logo img {
+  width: 25rem;
+  height: 27.4rem;
+}
+.box .user-password {
+  padding: 0 7.4rem;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.box .user-password input {
+  text-align: center;
+  padding-bottom: 2.4rem;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999999;
+  font-size: 2.8rem;
+  width: 100%;
+  border-bottom: 1px solid #999999;
+  margin-top: 9rem;
+}
+.box .user-password input::-webkit-input-placeholder {
+  color: #999999;
+}
+.box .user-password input:-moz-placeholder {
+  color: #999999;
+}
+.box .user-password input::-moz-placeholder {
+  color: #999999;
+}
+.box .user-password input:-ms-input-placeholder {
+  color: #999999;
+}
+.box .user-password input::placeholder {
+  color: #999999;
+}
+.box .user-password .errorUsername {
+  display: none;
+  position: absolute;
+  top: 9rem;
+  left: 8rem;
+  color: #fc3636;
+  font-size: 2.4rem;
+}
+.box .user-password .errorPassword {
+  display: none;
+  position: absolute;
+  top: 23.5rem;
+  left: 8rem;
+  color: #fc3636;
+  font-size: 2.4rem;
+}
+.box .user-password .inputUser {
+  background-image: url(../images/login-two.png);
+  background-repeat: no-repeat;
+  background-position: 56rem -1rem;
+  -o-background-size: 4.4rem 4.4rem;
+  background-size: 4.4rem 4.4rem;
+}
+.box .btn {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 6.3rem;
+  margin-bottom: 12rem;
+}
+.box .btn a img {
+  width: 10.2rem;
+  height: 10.2rem;
+}
+.box .forget {
+  padding: 0 21.4rem;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  color: #666666;
+  font-size: 2.6rem;
+}
+.box .agree {
+  width: 100%;
+  margin-top: 3rem;
+  font-size: 2.2rem;
+  color: #999999;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.box .agree a {
+  color: #666666;
+}
+.box .share {
+  padding: 0 17.2rem;
+  margin-top: 4.6rem;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.box .share a img {
+  width: 9rem;
+  height: 9rem;
+}
