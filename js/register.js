@@ -33,18 +33,27 @@ $(function(){
                         success: function(response){
                             console.log(response);
                             if(response.ok == true){
-                                var i = 3;
-                                $('.success').html('注册成功！' + i + '秒后跳转到登录页');
+                                var i = 2;
+                                // $('.success').html('注册成功！' + i + '秒后跳转到登录页');
+                                layer.open({
+                                    type: 2
+                                  });
                                 var timer = setInterval(function(){
                                     i--;
-                                    $('.success').html('注册成功！' + i + '秒后跳转到登录页');
+                                    // $('.success').html('注册成功！' + i + '秒后跳转到登录页');
                                     if(i == 0){
                                         clearInterval(timer);
                                         window.location.href = './login.html'
                                     }
                                 },1000);
                             }else{
-                                $('.success').html(response.msg);
+                                // $('.success').html(response.msg);
+                                layer.open({
+                                    content: response.msg,
+                                    skin: 'msg',
+                                    style: 'font-size: 2.7rem',
+                                    time: 2 //2秒后自动关闭
+                                });
                             }
                         }
                     });

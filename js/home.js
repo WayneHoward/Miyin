@@ -116,25 +116,19 @@ $(function(){
     // });
 
     //切换歌曲
-    // var index=0;
-    // for(var i = 0; i < $('audio').toArray().length; i++){
-    //     $('.play .nextMusic').on('tap',function(){
-    //         if (flag){
-    //             setTimeout(function(){
-    //                 index++;
-    //                 if(index>$('audio').toArray().length.length){
-    //                     index=0;
-    //                 }
-    //                 console.log($('audio').toArray().length.length);
-    //                 $('audio')[index-1].pause();
-    //                 $('audio')[index].play();
-    //                 $('audio')[index].addEventListener('ended',function(){
-    //                     $('audio')[index+1].play();
-    //             });
-    //             flag = true;
-    //             },200);
-    //         } 
-    //         flag = false; 
-    //     });
-    // }
+    var index=0;
+    for(var i = 0; i < $('audio').toArray().length; i++){
+        $('.play .nextMusic').on('tap',function(){
+            if (flag){
+                setTimeout(function(){
+                    layer.open({
+                        type: 2,
+                    });
+
+                flag = true;
+                },200);
+            } 
+            flag = false; 
+        });
+    }
 });

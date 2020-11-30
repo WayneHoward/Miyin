@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
   width: 100%;
   height: 12.7rem;
   background-image: url(../images/header.jpg);
@@ -52,6 +55,7 @@
   height: 0.4rem;
 }
 .swiper-container {
+  margin-top: 12.7rem;
   width: 100%;
   height: 40.9rem;
 }
@@ -75,6 +79,10 @@
   display: block;
   width: 2.2rem;
   height: 2.2rem;
+}
+.swiper-container .swiper-pagination span {
+  margin-right: 3.8rem !important;
+  margin-left: 3.8rem !important;
 }
 .nav {
   width: 100%;

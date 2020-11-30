@@ -17,9 +17,14 @@ $(function(){
         if (flag){
             setTimeout(function () {
                 if(passwordReg.test($('.password').val()) == false || $('.password').val() == ''){
-                    $('.errorPassword').show();
+                    layer.open({
+                        content: '手机号或密码不对',
+                        skin: 'msg',
+                        style: 'font-size: 2.7rem',
+                        time: 2 //2秒后自动关闭
+                    });
                 }else{
-                    $('.errorPassword').hide();
+                    // $('.errorPassword').hide();
                     $.ajax({
                         type: 'POST',
                         url: urlStr,
@@ -27,18 +32,27 @@ $(function(){
                         success: function(response){
                             console.log(response);
                             if(response.ok == true){
-                                var i = 3;
-                                $('.success').html('登录成功！' + i + '秒后跳转到首页');
+                                var i = 2;
+                                // $('.success').html('登录成功！' + i + '秒后跳转到首页');
+                                layer.open({
+                                    type: 2
+                                });
                                 var timer = setInterval(function(){
                                     i--;
-                                    $('.success').html('登录成功！' + i + '秒后跳转到首页');
+                                    // $('.success').html('登录成功！' + i + '秒后跳转到首页');
                                     if(i == 0){
                                         clearInterval(timer);
                                         window.location.href = './home.html'
                                     }
                                 },1000);
                             }else{
-                                $('.success').html(response.msg);
+                                // $('.success').html(response.msg);
+                                layer.open({
+                                    content: response.msg,
+                                    skin: 'msg',
+                                    style: 'font-size: 2.7rem',
+                                    time: 2 //2秒后自动关闭
+                                });
                             }
                         }
                     });
