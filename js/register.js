@@ -10,6 +10,15 @@ $(function(){
             $('.errorUsername').hide();
         }
     });
+    $('.sendCode').on('blur',function(){
+        if($('.sendCode').val() == ''){
+            $('.errorCode').show();
+        }else{
+            $('.errorCode').hide();
+        }
+    });
+    //注册  
+    var urlStr = 'http://192.168.1.94:3000/users'
     $('.btn').on('tap',function(){
         if (flag){
             setTimeout(function () {
@@ -17,8 +26,30 @@ $(function(){
                     $('.errorPassword').show();
                 }else{
                     $('.errorPassword').hide();
+                    $.ajax({
+                        type: 'POST',
+                        url: urlStr,
+                        data: 'type=register&phone=' + $('.username').val() + '&pass=' + $('.password').val(),
+                        success: function(response){
+                            console.log(response);
+                            if(response.ok == true){
+                                var i = 3;
+                                $('.success').html('注册成功！' + i + '秒后跳转到登录页');
+                                var timer = setInterval(function(){
+                                    i--;
+                                    $('.success').html('注册成功！' + i + '秒后跳转到登录页');
+                                    if(i == 0){
+                                        clearInterval(timer);
+                                        window.location.href = './login.html'
+                                    }
+                                },1000);
+                            }else{
+                                $('.success').html(response.msg);
+                            }
+                        }
+                    });
                 }
-                flag = true
+                flag = true;
             }, 200);
         }
         flag = false;

@@ -104,6 +104,7 @@
   background-size: 4.4rem 4.4rem;
 }
 .box .btn {
+  position: relative;
   width: 100%;
   display: -webkit-flex;
   display: -moz-box;
@@ -119,6 +120,12 @@
 .box .btn a img {
   width: 10.2rem;
   height: 10.2rem;
+}
+.box .btn .success {
+  position: absolute;
+  top: 14rem;
+  color: #fc3636;
+  font-size: 2.4rem;
 }
 .box .forget {
   padding: 0 21.4rem;

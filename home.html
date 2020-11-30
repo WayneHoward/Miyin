@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css//swiper-bundle.min.css">
+    <!-- <script src="./js/jquery-3.5.1.js"></script> -->
     <script src="./js/zepto.js"></script>
     <script src="./js/touch.js"></script>
+    <script src="./js/doT.min.js"></script>
     <script src="./js/public.js"></script>
     <script src="./js/home.js"></script>
 </head>
@@ -18,14 +20,14 @@
     <ul class="header">
         <li><img src="./images/list.jpg" alt=""></li>
         <li>
-            <a href="">我的</a>
+            <a href="javascript:void(0)">我的</a>
         </li>
         <li class="light">
-            <a href="">音乐馆</a>
+            <a href="javascript:void(0)">音乐馆</a>
             <img src="./images/9@2x.png" alt="">
         </li>
         <li>
-            <a href="">发现</a>
+            <a href="javascript:void(0)">发现</a>
         </li>
         <li><img src="./images/3@2x.png" alt=""></li>
     </ul>
@@ -33,42 +35,49 @@
     <!-- -------------------------------------------宣传轮播图 -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./images/home-1.png" alt=""></div>
+            <!-- <div class="swiper-slide"><img src="./images/home-1.png" alt=""></div>
             <div class="swiper-slide"><img src="./images/home-2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./images/home-3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./images/home-3.jpg" alt=""></div> -->
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
     </div>
+    <script id="list_templateBanner" type="text/x-dot-template">
+        {{~it.imglist:value:index}}
+            <div class="swiper-slide">
+                <img src={{=value}}>
+            </div>
+        {{~}}
+    </script>
     <!-- -------------------------------------------宣传轮播图 结束 -->
     <!-- -------------------------------------------导航 -->
     <ul class="nav">
         <li>
-            <a href="">
+            <a href="javascript:void(0)">
                 <p class="p1"><img src="./images/4@2x.png" alt=""></p>
                 <p class="p2">歌手</p>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="javascript:void(0)">
                 <p class="p1"><img src="./images/5@2x.png" alt=""></p>
                 <p class="p2">专辑</p>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="javascript:void(0)">
                 <p class="p1"><img src="./images/6@2x.png" alt=""></p>
                 <p class="p2">排行</p>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="javascript:void(0)">
                 <p class="p1"><img src="./images/7@2x.png" alt=""></p>
                 <p class="p2">电台</p>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="javascript:void(0)">
                 <p class="p1"><img src="./images/8@2x.png" alt=""></p>
                 <p class="p2">歌单</p>
             </a>
@@ -79,87 +88,68 @@
     <div class="content">
         <div class="title">
             <h2>精选歌单</h2>
-            <p>最新</p>
-            <p class="light">推荐<img src="./images/9@2x.png" alt=""></p>
+            <p class="light">最新<img src="./images/9@2x.png" alt=""></p>
+            <p class="light">推荐<img style="display: none;" src="./images/9@2x.png" alt=""></p>
         </div>
-        <ul>
-            <li>
-                <a href="">
-                    <img src="./images/10@2x.png" alt="">
-                    <p class="p1">轻车上路，一路飙向爱的乌托邦</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/11@2x.png" alt="">
-                    <p class="p1">无谓改变 生是见识</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/12@2x.png" alt="">
-                    <p class="p1">劲爽热舞 给自己的耳朵充电</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/13@2x.png" alt="">
-                    <p class="p1">无谓改变 生是见识</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/14@2x.png" alt="">
-                    <p class="p1">劲爽热舞 给自己的耳朵充电</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/15@2x.png" alt="">
-                    <p class="p1">轻车上路，一路飙向爱的乌托邦</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/11@2x.png" alt="">
-                    <p class="p1">无谓改变 生是见识</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/13@2x.png" alt="">
-                    <p class="p1">劲爽热舞 给自己的耳朵充电</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="./images/11@2x.png" alt="">
-                    <p class="p1">无谓改变 生是见识</p>
-                    <p class="p2">安安静静做自己</p>
-                </a>
-            </li>
-        </ul>
+
+        <ul class="new"></ul>
+        <ul class="recommend" style="display: none;"></ul>
+
+        <script id="list_templateNew" type="text/x-dot-template">
+            {{~it.musicList:value:index}}
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src={{=value.imgurl}} alt="">
+                        <p class="p1">{{=value.info}}</p>
+                        <p class="p2">{{=value.title}}</p>
+                    </a>
+                </li>
+            {{~}}
+        </script>
+        
+        <script id="list_templateRecommend" type="text/x-dot-template">
+            {{~it.musicList:value:index}}
+                <li>
+                    <a href="javascript:void(0)">
+                        <img src={{=value.imgurl}} alt="">
+                        <p class="p1">{{=value.info}}</p>
+                        <p class="p2">{{=value.title}}</p>
+                    </a>
+                </li>
+            {{~}}
+        </script>
     </div>
     <!-- -------------------------------------------内容 结束 -->
     <!-- -------------------------------------------播放控件 -->
+    <!-- 进度条 -->
+    <div class="jp-progress">
+        <div class="jp-seek-bar" style="width: 100%;">
+            <div class="jp-play-bar" style="width: 0%;"><span></span></div>
+        </div>
+    </div>
     <ul class="play">
-        <li><img src="./images/50@2x.png" alt=""></li>
+        <li class="circle"><img src="./images/50@2x.png" alt=""></li>
         <li>
-            <p class="p1">Where IS Your Love</p>
+            <p class="p1">Say it again</p>
             <p class="p2">横滑可以切换上下首哦</p>
         </li>
-        <li><a href=""><img src="./images/home-5.png" alt=""></a></li>
-        <li><a href=""><img src="./images/home-6.png" alt=""></a></li>
+        <li class="playing"><a href="javascript:void(0)"><img src="./images/home-4.png" alt=""></a></li>
+        <li style="display: none;" class="pauseing"><a href="javascript:void(0)"><img src="./images/pause.png" alt=""></a></li>
+        <li class="nextMusic"><a href="javascript:void(0)"><img src="./images/home-5.png" alt=""></a></li>
+        <li><a href="javascript:void(0)"><img src="./images/home-6.png" alt=""></a></li>
+        <p class="progress">00:00/00:00</p>
     </ul>
+    <audio id="player">
+        <source src="./audio/盘尼西林 - 再谈记忆.mp3">
+        <source src="./audio/James Blunt - You Are Beautiful.mp3">
+        <source src="./audio/John Denver - Take Me Home Country Roads.mp3">
+    </audio>
     <!-- -------------------------------------------播放控件 结束 -->
+    <!-- ------------------------歌词界面 -->
+    <div class="lyric">
+        
+    </div>
+    <!-- ------------------------歌词界面 结束 -->
 </body>
 <script src="./js/swiper-bundle.min.js"></script>
 </html>
